@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💗 Konversi Aesthetic App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🌷 Konversi Aesthetic 🌷</h1>
+
+    <!-- Menu Utama -->
+    <div id="menu" class="menu">
+      <button onclick="showPage('length')" class="menu-btn">📏 Konversi Panjang</button>
+      <button onclick="showPage('weight')" class="menu-btn">⚖️ Konversi Berat</button>
+    </div>
+
+    <!-- Konversi Panjang -->
+    <div id="length" class="converter-box hidden">
+      <h2>📏 Konversi Panjang</h2>
+      <input type="number" id="lengthValue" placeholder="Masukkan nilai..." />
+
+      <div class="select-group">
+        <select id="fromLength">
+          <option value="km">Kilometer (km)</option>
+          <option value="hm">Hektometer (hm)</option>
+          <option value="dam">Dekameter (dam)</option>
+          <option value="m" selected>Meter (m)</option>
+          <option value="dm">Desimeter (dm)</option>
+          <option value="cm">Centimeter (cm)</option>
+          <option value="mm">Milimeter (mm)</option>
+        </select>
+
+        <span>💫</span>
+
+        <select id="toLength">
+          <option value="km">Kilometer (km)</option>
+          <option value="hm">Hektometer (hm)</option>
+          <option value="dam">Dekameter (dam)</option>
+          <option value="m" selected>Meter (m)</option>
+          <option value="dm">Desimeter (dm)</option>
+          <option value="cm">Centimeter (cm)</option>
+          <option value="mm">Milimeter (mm)</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button class="convert-btn" onclick="convertLength()">✨ Konversi ✨</button>
+        <button class="reset-btn" onclick="resetLength()">🩷 Hapus 🩷</button>
+      </div>
+
+      <div id="lengthResult"></div>
+      <button class="back-btn" onclick="goBack()">⬅️ Kembali</button>
+    </div>
+
+    <!-- Konversi Berat -->
+    <div id="weight" class="converter-box hidden">
+      <h2>⚖️ Konversi Berat</h2>
+      <input type="number" id="weightValue" placeholder="Masukkan nilai..." />
+
+      <div class="select-group">
+        <select id="fromWeight">
+          <option value="kg">Kilogram (kg)</option>
+          <option value="hg">Hektogram (hg)</option>
+          <option value="dag">Dekagram (dag)</option>
+          <option value="g" selected>Gram (g)</option>
+          <option value="dg">Desigram (dg)</option>
+          <option value="cg">Centigram (cg)</option>
+          <option value="mg">Miligram (mg)</option>
+        </select>
+
+        <span>🌸</span>
+
+        <select id="toWeight">
+          <option value="kg">Kilogram (kg)</option>
+          <option value="hg">Hektogram (hg)</option>
+          <option value="dag">Dekagram (dag)</option>
+          <option value="g" selected>Gram (g)</option>
+          <option value="dg">Desigram (dg)</option>
+          <option value="cg">Centigram (cg)</option>
+          <option value="mg">Miligram (mg)</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button class="convert-btn" onclick="convertWeight()">✨ Konversi ✨</button>
+        <button class="reset-btn" onclick="resetWeight()">🩷 Hapus 🩷</button>
+      </div>
+
+      <div id="weightResult"></div>
+      <button class="back-btn" onclick="goBack()">⬅️ Kembali</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
